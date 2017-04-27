@@ -22,6 +22,7 @@ class TestGetData(unittest.TestCase):
             print("Create a file", filename)
             f = open(filename, "w")
 
+        f.close()
         result = get_data(url)
         test = "File exists"
         self.assertEqual(result, test)

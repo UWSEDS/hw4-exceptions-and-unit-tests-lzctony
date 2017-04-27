@@ -12,7 +12,7 @@ url = "https://data.seattle.gov/resource/4xy5-26gy.csv"
 filename = os.path.basename(url)
 
 
-class TestGetData(unittest.TestCase):
+class TestRemoveData(unittest.TestCase):
 
     # remove file exists
     def testFileExists(self):
@@ -22,7 +22,7 @@ class TestGetData(unittest.TestCase):
         else:
             print("Create a file name", filename)
             f = open(filename, "w")
-
+        f.close()
         print("Testing remove file exists.")
         result = remove_data(url)
         test = "File was successfully deleted"
